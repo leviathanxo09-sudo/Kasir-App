@@ -1,0 +1,362 @@
+
+
+.kasir-main {
+    display: flex;
+    flex: 1;
+    margin-left: 260px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.kasir-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.kasir-right {
+    width: 340px;
+    background: white;
+    border-left: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.search {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    outline: none;
+    background: white;
+    box-sizing: border-box;
+}
+
+.search:focus {
+    border-color: #00a2ff;
+}
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+}
+
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+}
+
+.product-emoji {
+    font-size: 2.5rem;
+}
+
+.product-card h3 {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #1e1e2e;
+}
+
+.product-price {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #00a2ff;
+}
+
+.product-stock {
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.product-card button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    background: #00a2ff;
+    color: white;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.product-card button:hover {
+    background: #0088d4;
+}
+
+.product-card button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 24px;
+}
+
+.cart h2 {
+    font-size: 1.2rem;
+    color: #1e1e2e;
+    margin-bottom: 16px;
+}
+
+.cart-empty {
+    color: #aaa;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 16px 0;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 16px;
+    color: #1e1e2e;
+}
+
+.btn-bayar {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: #00a2ff;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-bayar:hover {
+    background: #0088d4;
+}
+
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.cart-item-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1e1e2e;
+}
+
+.cart-item-qty {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.cart-item-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-subtotal {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #00a2ff;
+}
+
+.cart-item-right button {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 4px 6px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.cart-item-right button:hover {
+    background: rgba(255, 50, 50, 0.1);
+}
+
+/* Payment Modal */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal h2 {
+    font-size: 1.3rem;
+    color: #1e1e2e;
+}
+
+.modal-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #1e1e2e;
+}
+
+.modal input {
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    font-size: 1rem;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.modal input:focus {
+    border-color: #00a2ff;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.btn-batal {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    color: #888;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-batal:hover {
+    background: #f0f0f0;
+}
+
+.btn-proses {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #00a2ff;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-proses:hover {
+    background: #0088d4;
+}
+
+.btn-proses:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+
+    .kasir-right {
+        width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .kasir-main {
+        flex-direction: column;
+        margin-left: 0;
+        margin-bottom: 70px;
+        height: auto;
+        overflow: auto;
+    }
+
+    .kasir-left {
+        padding: 16px;
+    }
+
+    .kasir-right {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid #e0e0e0;
+        max-height: 400px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 12px;
+    }
+
+    .modal {
+        width: 90%;
+        padding: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kasir-left {
+        padding: 12px;
+    }
+}
